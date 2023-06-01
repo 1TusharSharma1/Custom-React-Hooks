@@ -8,9 +8,9 @@ const useHTTP = () => {
     try {
       const response = await fetch(
         requestConfig.url, {
-          method: requestConfig.method,
-          headers: requestConfig.headers,
-          body: JSON.stringify(requestConfig.body)
+          method: requestConfig.method ? requestConfig.method: 'GET',
+          headers: requestConfig.headers? requestConfig.headers: {},
+          body: JSON.stringify(requestConfig.body) ? JSON.stringify(requestConfig.body) : null
         }
       );
 
