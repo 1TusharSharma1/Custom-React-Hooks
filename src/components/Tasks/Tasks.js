@@ -27,6 +27,7 @@ const Tasks = (props) => {
 
   return (
     <Section>
+      <h5>YOUR TASKS: </h5> 
       <div className={classes.container}>{content}</div>
     </Section>
   );
